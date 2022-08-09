@@ -1,0 +1,282 @@
+Question 1:
+
+
+1-
+
+a)They are both used to store collection of sequential data,can store any kind of data type.
+
+b)the tuples are immutable (canot change in it ) objects the lists are mutable(can change in it). 
+
+
+2-
+
+a) the break statement can only be used within the for and while loops, Once the program encounters the break statement, it terminates the loop immediately.
+
+b) the pass statement use To do nothing inside a block of code.
+
+c) It is almost the opposite of the break statement discussed above, Break terminates the loop, and the continue statement forces the program to execute the next iteration of the loop.
+
+
+3-
+
+The self is used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python.
+
+
+
+4- A Python docstring is a string used to document a Python module, class, function or method, so programmers can understand what it does without having to read the details of the implementation.
+
+
+5-Yes,Python supports multiple inheritance
+
+class Animal:
+   def eat(self):
+      print("It eats insects.")
+   def sleep(self):
+      print("It sleeps in the night.")
+
+class Bird(Animal):
+   def fly(self):
+      print("It flies in the sky.")
+
+Koyal= Bird()
+Koyal.eat()
+Koyal.sleep()
+Koyal.fly()
+
+=====================================================================
+
+Question2 :
+
+1-true
+
+
+2-false
+
+
+3-false
+
+
+4-false
+
+
+5-false
+
+====================================================================
+
+Question3 :
+
+1-
+
+def count() :
+    count = 0
+    String = input('Enter the string :')
+
+    for i in String:
+        if i == 'a' or i == 'e' or i == 'i' or i == 'o' or i == 'u'or i == 'A' or i == 'E' or i == 'I' or i == 'O' or i == 'U':
+      
+            count+=1
+
+    if count == 0:
+
+        print('No vowels found')
+
+    else:
+
+        print('Total vowels are :' , count)
+    
+count()
+
+
+
+
+
+2-
+
+
+def recursum(n):
+    if n <= 1:
+        return n
+    else:
+        return n + recursum(n - 1)
+
+num = 5
+
+if num < 0:
+    print("Enter a positive number")
+else:
+    print("The sum is", recursum(num))
+
+
+3-
+
+n1 = 0
+n2 = 1
+term = int(input("Enter the number of terms : "))
+
+if term ==1:
+        print(n1,end = " ")
+else :
+        print(n1,n2,end=" ")
+        for i in range(2,term):
+            n3 = n1+n2
+            print(n3,end=" ")
+            n1 = n2
+            n2 = n3
+
+
+
+4- 
+
+x = 200
+
+sample_dict = {'a': 100, 'b': 200, 'c': 300}
+
+if x in sample_dict.values() :
+    
+    print("200 present in a dict")
+
+else :
+    
+     print("200 isn't present in a dict")
+
+
+5-
+
+
+import math
+
+class Circle:
+    def init(self, radius, colour):
+        self.radius = radius
+        self.colour = colour
+    def calcArea(self):
+        Area = math.pi * math.pow(self.radius, 2)
+        print("The Area of the Circle = ", Area)
+    def setColour(self):
+        Colour = self.colour
+        print("The Colour of the circle is", Colour)
+
+class Cylinder(Circle):
+    def init(self, height):
+        self.height = height
+    def calcVolume(self):
+        Volume = math.pi * math.pow(self.radius, 2) * self.height
+        print("The Volume of the Cylinder = ", Volume)
+
+circle = Circle(2,'blue')
+circle.setColour()
+circle.calcArea()
+cylinder = Cylinder(1)
+cylinder.calcVolume()
+
+====================================================================
+
+Question4 :
+
+1-
+
+import string 
+import random
+
+uppercase = list(str.upper(string.ascii_letters))
+lowercase = list(str.lower(string.ascii_letters))
+numbers = list(string.digits)
+
+def passwordGenerator():
+    passwordLength = input('Enter password length: ')
+    passwordLength = int(passwordLength)
+    password = []
+    random.shuffle(uppercase)
+    random.shuffle(lowercase)
+    random.shuffle(numbers)
+
+    for i in range(round(passwordLength * 0.4)):
+        password.append(uppercase[i])
+
+    for i in range(round(passwordLength * 0.3)):
+        password.append(lowercase[i])
+
+    for i in range(round(passwordLength * 0.3)):
+        password.append(numbers[i])
+
+    password = "".join(password[0:])
+
+    print("Your Password is : ", password)
+
+passwordGenerator()
+
+
+
+2-
+
+
+
+
+
+
+
+==================================================================
+
+
+Question5 :
+
+
+1-
+
+a) default constructor :
+
+class Number:
+    num = 50
+
+    def number(self):
+        print(self.num)
+
+x = Number()
+
+x.number()
+
+
+
+b) Parameterized constructor :
+
+
+class Number:
+    num = 55
+
+    def __init__(self, data):
+        self.num = data
+
+    def number(self):
+        print(self.num)
+
+x = Number(55)
+
+x.number()
+
+
+
+2- 
+
+class Number:  =>(Class)
+    num = 50
+
+    def number(self):
+        print(self.num)
+
+x = Number()  =>(Object)
+
+x.number()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
